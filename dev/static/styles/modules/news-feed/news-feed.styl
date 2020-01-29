@@ -1,0 +1,300 @@
+.container
+	width 1170px
+
+.news-feed
+	width 1170px
+	display flex
+	justify-content space-between
+
+	&__main-card
+		padding-bottom 170px
+		
+
+	&__main
+		padding-top 75px
+
+	&__main-img 
+		width 760px
+		border-radius 5px	
+
+	&__article 
+		width 670px
+		background-color $white
+		box-shadow 0 0 5px $gray-500
+		border-radius 3px
+		position absolute
+		z-index: 5
+		transform translateY(-120px)
+		margin-left 40px
+
+	&__category
+		display flex
+		margin-top 30px
+		width 62px
+		height 22px
+		color $white
+		background-color $mate-blue
+		align-items center
+		padding-left 12px
+		margin-left 30px
+		border-radius 4px
+
+	&__category-post	
+		display flex
+		margin-top 20px
+		width 62px
+		height 22px
+		color $white
+		background-color $mate-blue
+		align-items center
+		padding-left 12px
+		margin-left 20px
+		border-radius 4px
+		position absolute	
+
+	&__side
+		width 285px
+		padding-top 75px
+
+	&__side-post
+		padding-top 39px	
+
+	&__side-post-text
+		padding-top 80px
+		font-size 18px
+		font-weight bold
+		line-height 23px
+		color: $black	
+	
+	&__side-post-instagram
+		padding-top 50px
+		font-size 18px
+		font-weight bold
+		line-height 23px
+		color: $black	
+	&__side-instagram-post__img	
+		padding 5px 10px 5px 0
+
+	&__side-instagram-post	
+		margin 10px 0px 20px 0px 
+
+	&__side-article
+
+	&__side-img
+		border-radius 4px	
+
+	&__side-title 
+		font-size 18px
+		font-weight bold
+		line-height 23px
+		color: $black	
+		margin 12px 0 10px 0
+
+	&__side-employment
+		font-size 14px
+		line-height 18px
+		font-weight normal
+		font-style italic
+		color $gray-500	
+	
+	&__side-text			
+		display flex
+		flex-wrap wrap
+		font-size 15px
+		font-style normal
+		font-weight normal
+		line-height 15px
+		color $gray-700
+		margin-top 13px
+		margin-bottom 25px
+
+	&__side-btn
+		color $white
+		background-color $gray-900
+		font-size 14px
+		line-height 18px
+		color $white
+		font-style normal
+		font-weight bold
+		padding 17px 81px 17px 80px
+		border-radius 5px
+
+	&__side-instagram-btn
+		color $white
+		background-color $gray-900
+		font-size 14px
+		line-height 18px
+		color $white
+		font-style normal
+		font-weight bold
+		padding 17px 81px 17px 96px
+		border-radius 5px
+		margin-top 30px
+
+	&__side-tags
+		display flex
+		flex-wrap wrap
+
+
+	&__side-post-tag	
+		font-size 14px
+		font-style normal
+		font-weight 50
+		line-height 18px
+		color $black-900	
+		background $gray-200
+		margin 10px 9px 0 0
+		padding 7px 16px 5px 16px
+		border-radius 3px  
+
+	&__side-tags-title	
+		font-size 18px
+		font-weight bold
+		line-height 21px
+		font-style normal
+		padding 60px 0 27px 0
+
+	&__side-form-title 
+		font-style normal
+		font-size 18px
+		line-height 23px
+		color: $black-700
+		margin 60px 0 11px 0
+
+	&__side-form-text
+		font-style normal
+		font-weight normal
+		font-size 14px
+		line-height 24px
+		color $gray-700
+
+	&__side-forms 
+		padding-top 25px	
+
+	&__side-form-name
+		width 270px
+		height 50px
+		border-radius 3px	
+		border 1px solid $gray-400	
+		color $gray-400
+		margin-bottom 10px
+		padding-left 15px
+
+	&__side-form-email
+		width 270px
+		height 50px
+		border-radius 3px	
+		border 1px solid $gray-400	
+		color $gray-400
+		padding-left 15px
+		margin-bottom 30px
+
+	&__side-form-btn
+		color $white
+		background-color $gray-900
+		font-size 14px
+		line-height 18px
+		color $white
+		font-style normal
+		font-weight bold
+		padding 17px 81px 17px 50px
+		border-radius 5px
+		margin-top 30px
+		&:hover
+			background-color $white
+			color $gray-900
+			border 1px solid $gray-900	
+
+	&__paginators
+		display flex
+		align-items center
+
+	&__paginator-icon
+		width 18px
+		height 18px
+		fill $black
+		font-weight bold
+		&:hover
+			fill $white
+		
+	&__paginators-prev-arrow
+		display inline-block
+		border 1px solid $gray-400
+		padding 11px 10px 13px 10px
+		height 40px
+		border-radius 3px
+		&:hover
+			background-color $black
+
+	&__paginators-next-arrow
+		display inline-block
+		border 1px solid $gray-400
+		padding 11px 10px 13px 10px
+		height 40px
+		margin-left 9px
+		border-radius 3px
+		font-weight 700
+		&:hover
+			background-color $black
+			transition 0s
+	
+	&__paginator
+		display inline-block
+
+	&__paginator-box	
+		display inline
+		border 1px solid $gray-400
+		padding 9px 16px 
+		margin-left 10px
+		color $black
+		height 40px
+		font-size 16px
+		line-height 16px
+		font-style normal
+		font-weight normal
+		text-align center
+		border-radius 3px 
+		&:hover
+			background-color $black
+			color $white
+			border-color #000
+		
+		&--black
+			background-color $black
+			color $white
+			border-color #000
+
+.article
+
+	&__title
+		font-size 23px
+		font-weight bold
+		line-height 28px
+		font-style normal
+		margin 20px 0 20px 0
+		padding-left 30px
+	
+	&__author
+		font-size 14px
+		font-weight normal
+		line-height 18px
+		font-style italic
+		color $gray-700
+		text-align center
+		padding-left 30px
+
+	&__text 
+		font-size 14px
+		font-weight normal
+		font-style normal
+		line-height 24px
+		color $gray-700
+		display flex
+		flex-wrap wrap
+		padding-top 20px
+		width 90%
+		padding 0 0 30px 30px
+
+	
+
+		
