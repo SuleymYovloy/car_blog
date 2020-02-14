@@ -1,33 +1,100 @@
-.main-nav__list 
-	font-size 14px
-	text-decoration none
-	list-style none
-	display flex
-	justify-content center
-.main-nav__item {
-	padding-right 45px
-}	
-.main-nav {
+.main-nav
 	padding-top 4px
-}
 
-.main-nav__item a 
-	color $white
-	font-family 'PT Sans'
+	&__link 
+		font-size 14px
+		text-decoration none
+		list-style none
+
+	&__list
+		display flex
+		justify-content center
+
+	&__item 
+		padding-right 45px
+
+	&__item a 
+		color $white
+		font-family 'PT Sans'
+
+	@media(max-width: $grid-sm-max)
+		position absolute
+		z-index 5
+		background #000
+		left 0
+		top 0
+		padding 40px
+		transform: translateX(-100%)
+		transition transform 0.3s linear
+
+		&__list
+			flex-direction column 
+			background url(../static/images/svg/sandvich.svg)
+		
+		&__item
+			padding-bottom 10px
+		
+		&.is-active
+			transform translateX(0)
+
+.header-btn
+	background-color $black
+	border none
+
+.btn-sandvich
+	width 30px
+	height 30px
+	fill $white
 	
-.header__main
-	background $black
+
+.header
+	background-color $black
 	height 90px	
-.container {
-	width 1170px
-}	
-.header-menu
+	width 100%
+
+.header-main__menu
 	display flex
 	justify-content space-between
 	padding-top 35px
-	
-	&__search
+	align-items: center
+
+	&-search
 		width 16px
 		height 17px
-		transform translateX(25px)
+
+		@media(max-width $grid-sm-max)
+			margin-left: auto
+			margin-right: 35px
 		
+.sandwich 
+	cursor: pointer;
+	height: 15px;
+	position: relative;
+	width: 22px;
+	
+	&.is 
+			&-active 
+					.sandwich__line 
+							&--top 
+									top: 7px;
+									transform: rotate(45deg);
+							
+							&--middle { opacity: 0; }
+							&--bottom 
+									top: 7px;
+									transform: rotate(-45deg);
+
+	&__line 
+			background-color: $white;
+			display: block;
+			height: 2px;
+			left: 0;
+			position: absolute;
+			transition: all linear .4s;
+			width: 100%;
+			&--top { top: 0; }
+			&--middle { top: 7px; }
+			&--bottom { top: 14px; }
+	
+	@media(min-width $grid-md)
+		display none

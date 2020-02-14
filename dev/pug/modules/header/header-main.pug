@@ -1,8 +1,12 @@
-.header__main 
+.header-main
 	.container
-		.header-menu
+		.header-main__menu
 			a(href="#")
 				img(src="static/images/content/logo.png", alt="Логотип") 
 			include ../main-nav/main-nav
-			a(href="#").header-menu__search
+			a(href="#").header-main__menu-search
 				img(src="static/images/content/search.png", alt="Поиск").search
+			.sandwich
+				.sandwich__line.sandwich__line--top
+				.sandwich__line.sandwich__line--middle
+				.sandwich__line.sandwich__line--bottom

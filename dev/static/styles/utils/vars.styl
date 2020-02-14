@@ -42,17 +42,35 @@ $linkHoverColor = $secondaryHov
 
 
 // Grid
-$grid-sm = 576px
-$grid-md = 768px
-$grid-lg = 992px
-$grid-xl = 1200px
-$grid-xxl = 1600px
+$grid-sm = 576px //это размеры экрана когда ты идешь от большего к меньшему
+$grid-md = 768px //т/е верстаешь сначала мобильную версию, а потом делаешь адаптив 
+$grid-lg = 992px //для компьютера, для больших экранов
+$grid-xl = 1200px //это называется mobile-first
+$grid-xxl = 1600px //они пишутся в медия запросах через min-width - @media(min-width $grid-sm)
 
-$grid-xs-max = (576px - 0.02px)
-$grid-sm-max = (768px - 0.02px)
-$grid-md-max = (992px - 0.02px)
-$grid-lg-max = (1200px - 0.02px)
-$grid-xl-max = (1600px - 0.02px)
+//@media(min-width $grid-sm) //в мобайл=ферст размеры экрана пишутся в порядке возрастания
+//@media(min-width $grid-md)
+//@media(min-width $grid-lg)
+//@media(min-width $grid-xl)
+//@media(min-width $grid-xxl)
+
+
+$grid-xs-max = (576px - 0.02px) //это размеры экрана когда верстаешь сначала десктоп(большую) версию 
+$grid-sm-max = (768px - 0.02px) //а потом делаешь адаптив для мобильных устройтв, называется desktop-first
+$grid-md-max = (992px - 0.02px) //они пишутся в медия запросах через max-width - @media(max-width $grid-sm)
+$grid-lg-max = (1200px - 0.02px) 
+$grid-xl-max = (1600px - 0.02px) 
+
+//@media(max-width $grid-xxl) обрати внимание что при десктоп-фёрст размеры пишутся в порядке убывания
+//@media(max-width $grid-xl)
+//	тут твои стили должны быть 
+//	padding 10px
+//	color: #cccccc
+//	и тд
+//@media(max-width $grid-lg)
+//@media(max-width $grid-md)
+//@media(max-width $grid-sm)
+
 
 $container-sm = 540px
 $container-md = 720px

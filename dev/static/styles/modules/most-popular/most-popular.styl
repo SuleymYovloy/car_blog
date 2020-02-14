@@ -1,6 +1,6 @@
 .most-popular
 	padding-top 80px
-	width 1170px
+	//width 1170px
 	padding-bottom 80px
 
 	&__title
@@ -12,6 +12,10 @@
 
 	&__posts
 		display flex
+		@media screen and (max-width: $grid-lg-max)
+			flex-wrap wrap
+			display flex
+			width 90%
 
 	&__post
 		margin-right 30px
@@ -19,9 +23,11 @@
 		&:last-child
 			margin 0
 			padding 0	
+		@media screen and (max-width: $grid-lg-max)
+			margin-bottom 50px	
 
 	&__post-img
-		border-radius 5px
+		border-radius 5px	
 
 	&__post-title
 		font-size 19px

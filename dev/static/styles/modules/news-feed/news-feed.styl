@@ -1,42 +1,92 @@
 .container
-	width 1170px
+	// width 1170px
 
 .news-feed
-	width 1170px
 	display flex
 	justify-content space-between
+	margin-top 75px
+	@media screen and (max-width: $grid-lg-max)
+		display block
 
 	&__main-card
-		padding-bottom 170px
+		margin-right 130px
+		position relative
+		margin-bottom 180px
+		@media screen and (max-width: $grid-lg-max)
+			width 100%
+			margin-bottom 180px
 		
-
 	&__main
-		padding-top 75px
+		width calc(100% - 270px)
+		@media screen and (max-width: $grid-lg-max)
+			width 100%
+			padding-top 30px
 
 	&__main-img 
-		width 760px
+		width 100%
 		border-radius 5px	
+			
 
 	&__article 
-		width 670px
+		width calc(100% - 40px)
+		padding 30px 
 		background-color $white
 		box-shadow 0 0 5px $gray-500
 		border-radius 3px
-		position absolute
 		z-index: 5
-		transform translateY(-120px)
-		margin-left 40px
+		margin 0 20px
+		z-index 1
+		transform: translateY(-50%)	
+		position absolute
+			
+
+	&__article-title
+		font-family 'PT Sans' sans-serif
+		font-style normal
+		font-weight bold
+		font-size 25px
+		line-height 28px
+		padding 15px 0 15px 0
+		@media screen and (max-width: $grid-sm-max)
+			font-size 15px
+			line-height 20px
+
+	&__article-author
+		font-family 'PT Sans' sans-serif
+		font-style italic
+		font-weight normal
+		font-size 14px
+		line-height 18px	
+		color $gray-600	
+		@media screen and (max-width: $grid-sm-max)
+			font-size 13px
+			line-height 10px
+		
+
+	&__article-text
+		font-family 'PT Sans' sans-serif
+		font-size 14px
+		font-style normal
+		font-weight normal
+		line-height 24px
+		display flex
+		flex-wrap wrap
+		color $gray-600
+		padding-top 14px
+		@media screen and (max-width: $grid-sm-max)
+			font-size 14px
+			line-height 16px
+
 
 	&__category
-		display flex
-		margin-top 30px
+		display inline-flex
+		justify-content center
 		width 62px
 		height 22px
 		color $white
 		background-color $mate-blue
 		align-items center
-		padding-left 12px
-		margin-left 30px
+		text-align center
 		border-radius 4px
 
 	&__category-post	
@@ -54,10 +104,20 @@
 
 	&__side
 		width 285px
-		padding-top 75px
+		@media screen and (max-width: $grid-lg-max)
+			width 100%
+
+	&__side-posts
+		@media screen and (max-width: $grid-lg-max)
+			display flex
+			flex-wrap wrap
+		@media screen and (max-width: $grid-md-max)
+			display block	
 
 	&__side-post
-		padding-top 39px	
+		padding-top 39px
+		@media screen and (max-width: $grid-lg-max)
+			width 285px
 
 	&__side-post-text
 		padding-top 80px
@@ -72,13 +132,20 @@
 		font-weight bold
 		line-height 23px
 		color: $black	
+		
 	&__side-instagram-post__img	
 		padding 5px 10px 5px 0
 
 	&__side-instagram-post	
 		margin 10px 0px 20px 0px 
+		@media screen and (max-width: $grid-lg-max)
+			width 100%
+
 
 	&__side-article
+		@media screen and (max-width: $grid-lg-max)
+			padding-top 60px
+			width 285px
 
 	&__side-img
 		border-radius 4px	
@@ -118,6 +185,10 @@
 		font-weight bold
 		padding 17px 81px 17px 80px
 		border-radius 5px
+		&:hover
+			background-color $white
+			color $gray-900
+			border 1px solid $gray-900
 
 	&__side-instagram-btn
 		color $white
@@ -130,6 +201,10 @@
 		padding 17px 81px 17px 96px
 		border-radius 5px
 		margin-top 30px
+		&:hover
+			background-color $white
+			color $gray-900
+			border 1px solid $gray-900
 
 	&__side-tags
 		display flex
@@ -179,6 +254,8 @@
 		color $gray-400
 		margin-bottom 10px
 		padding-left 15px
+		@media screen and (max-width: $grid-lg-max)
+			margin-right 10px
 
 	&__side-form-email
 		width 270px
@@ -208,6 +285,8 @@
 	&__paginators
 		display flex
 		align-items center
+		@media screen and (max-width: $grid-sm-max)
+			justify-content center
 
 	&__paginator-icon
 		width 18px
@@ -254,6 +333,8 @@
 		font-weight normal
 		text-align center
 		border-radius 3px 
+		
+
 		&:hover
 			background-color $black
 			color $white
@@ -272,7 +353,6 @@
 		line-height 28px
 		font-style normal
 		margin 20px 0 20px 0
-		padding-left 30px
 	
 	&__author
 		font-size 14px
@@ -281,7 +361,6 @@
 		font-style italic
 		color $gray-700
 		text-align center
-		padding-left 30px
 
 	&__text 
 		font-size 14px
@@ -293,7 +372,6 @@
 		flex-wrap wrap
 		padding-top 20px
 		width 90%
-		padding 0 0 30px 30px
 
 	
 
